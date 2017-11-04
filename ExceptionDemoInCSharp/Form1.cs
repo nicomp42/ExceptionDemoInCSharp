@@ -21,5 +21,10 @@ namespace ExceptionDemoInCSharp
         {
             lblResult.Text = Convert.ToString(Convert.ToInt32(txtANumber.Text) + 42);
         }
+
+        private void btnLogError_Click(object sender, EventArgs e)
+        {
+            Logger.WriteToEventLog(new Error(lblErrorMessage.Text));
+        }
     }
 }

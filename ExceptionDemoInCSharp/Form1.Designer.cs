@@ -31,6 +31,8 @@
             this.txtANumber = new System.Windows.Forms.TextBox();
             this.btnClickMe = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.btnLogError = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtANumber
@@ -60,16 +62,38 @@
             this.lblResult.TabIndex = 2;
             this.lblResult.Text = "Result";
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Location = new System.Drawing.Point(166, 118);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(105, 17);
+            this.lblErrorMessage.TabIndex = 3;
+            this.lblErrorMessage.Text = "Some Message";
+            // 
+            // btnLogError
+            // 
+            this.btnLogError.Location = new System.Drawing.Point(295, 118);
+            this.btnLogError.Name = "btnLogError";
+            this.btnLogError.Size = new System.Drawing.Size(220, 23);
+            this.btnLogError.TabIndex = 4;
+            this.btnLogError.Text = "Send to Windows Event Log";
+            this.btnLogError.UseVisualStyleBackColor = true;
+            this.btnLogError.Click += new System.EventHandler(this.btnLogError_Click);
+            // 
             // frmExceptionHandling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 428);
+            this.Controls.Add(this.btnLogError);
+            this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnClickMe);
             this.Controls.Add(this.txtANumber);
             this.Name = "frmExceptionHandling";
-            this.Text = "frmExceptionHandling";
+            this.Text = "Exception Handling Demo in C#";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +104,8 @@
         private System.Windows.Forms.TextBox txtANumber;
         private System.Windows.Forms.Button btnClickMe;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblErrorMessage;
+        private System.Windows.Forms.Button btnLogError;
     }
 }
 
