@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ExceptionDemoInCSharp
 {
-    public partial class Form1 : Form
+    public partial class frmExceptionHandling : Form
     {
-        public Form1()
+        public frmExceptionHandling()
         {
             InitializeComponent();
+        }
+
+        private void btnClickMe_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = Convert.ToString(Convert.ToInt32(txtANumber.Text) + 42);
         }
     }
 }
