@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExceptionDemoInCSharp
 {
+    /// <summary>
+    /// The Exception thrown when an Error object encounters an invalid error message
+    /// </summary>
     class ErrorMessageException :Exception
     {
         public ErrorMessageException(String message) : base (message)
