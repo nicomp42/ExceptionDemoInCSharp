@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExceptionDemoInCSharp
 {
+    /// <summary>
+    /// When catching exceptions list the catch blocks from specific to general.
+    /// </summary>
     class OrderOfCatchBlocks
     {
         private void demo()
@@ -23,6 +26,9 @@ namespace ExceptionDemoInCSharp
 
             }
         }
+        /// <summary>
+        /// This will not build. The order of the exceptions is incorrect
+        /// </summary>
         private void FailedDemo()
         {
             try
